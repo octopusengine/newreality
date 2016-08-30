@@ -27,5 +27,5 @@ A2 - 0.5 - 3D perspective<br />
 A3 - 0.9 - 3D stereography for VR + HW test (Raspberry PI3)<br />
 -> newreality1.0<br /><br />
 (B) next step - nework and cooperation<br />
--> todo 2.0<br />
+-> todo 2.0<br /><br />
 (C) final? ;-)<br /><br />
