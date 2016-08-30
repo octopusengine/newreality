@@ -2,7 +2,8 @@
 
 comming soon
 
-<img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650"></ br>
+<img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
+<br />
 lite - running on PC-WIN, MAC, Linux (UBUNTU, MINT, Debian)
 + hw console - for Raspberry Pi3 (Raspbian)
 
