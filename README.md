@@ -11,7 +11,7 @@ lite - running on PC-WIN, MAC, Linux (UBUNTU, MINT, Debian)
 perspective - red/blue - streography
 
 <h2>network testing</h2>
-localhost...
+localhost... > (IP)
 
 <h2>TO DO (SW)</h2>
 local network runnig
