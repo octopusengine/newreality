@@ -3,6 +3,8 @@
 comming soon
 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
+lite - running on PC-WIN, MAC, Linux (UBUNTU, MINT, Debian)
++ hw console - for Raspberry Pi3 (Raspbian)
 
 <h2>visualisation</h2>
 perspective - red/blue - streography
