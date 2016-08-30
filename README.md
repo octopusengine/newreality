@@ -13,6 +13,9 @@ perspective - red/blue - streography
 <h2>network testing</h2>
 localhost...
 
-<h2>next step</h2>
+<h2>TO DO (SW)</h2>
+local network runnig
+
+<h2>next step (HW)</h2>
 Raspbery Pi3 - hardware "console" / interface
 
