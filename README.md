@@ -19,6 +19,7 @@ local network runnig
 <h2>next step (HW)</h2>
 Raspbery Pi3 - hardware "console" / interface
 
+<hr />
 <h2>config.ini</h2>
 <code>//---------------octopus engine config----</code><br />
 <br />
