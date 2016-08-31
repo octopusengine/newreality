@@ -19,14 +19,14 @@ local network runnig
 <h2>next step (HW)</h2>
 Raspbery Pi3 - hardware "console" / interface
 
-
-//---------------octopus engine config----
-
-ver=1.0.0
-
-hw=0
-
 <h2>config.ini</h2>
+<code>//---------------octopus engine config----</code><br />
+<br />
+<code>ver=1.0.0</code><br />
+
+<code>hw=0</code><br />
+<br />
+
 <code>//---------------network------------------</code><br />
 <code>net=single</code><br />
 <code>//single/server/client</code><br />
