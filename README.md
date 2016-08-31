@@ -27,17 +27,17 @@ ver=1.0.0
 hw=0
 
 <h2>config.ini</h2>
-<code>//---------------network------------------</code>
-<code>net=single</code>
-<code>//single/server/client</code>
-<code> </code>
-<code>ips=1.2.3.5</code>
-
-//a - single
-//b - client-server on one computer  -> ips=localhost 
-//c - client-server on two computers -> ips=1.2.3.5 (your server IP)
-
-//--------------/network------------------
+<code>//---------------network------------------</code><br />
+<code>net=single</code><br />
+<code>//single/server/client</code><br />
+<code> </code><br />
+<code>ips=1.2.3.5</code><br />
+<code> </code><br />
+<code>//a - single</code><br />
+<code>//b - client-server on one computer  -> ips=localhost</code><br /> 
+<code>//c - client-server on two computers -> ips=1.2.3.5 (your server IP)</code><br />
+<code> </code><br />
+<code>//--------------/network------------------</code><br />
 
 
 <hr/>
