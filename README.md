@@ -19,6 +19,27 @@ local network runnig
 <h2>next step (HW)</h2>
 Raspbery Pi3 - hardware "console" / interface
 
+
+//---------------octopus engine config----
+
+ver=1.0.0
+
+hw=0
+
+<h2>config.ini</h2>
+<code>//---------------network------------------</code>
+<code>net=single</code>
+<code>//single/server/client</code>
+<code> </code>
+<code>ips=1.2.3.5</code>
+
+//a - single
+//b - client-server on one computer  -> ips=localhost 
+//c - client-server on two computers -> ips=1.2.3.5 (your server IP)
+
+//--------------/network------------------
+
+
 <hr/>
 <h2>history</h2>
 (A) version serves as a feasibility study<br />
