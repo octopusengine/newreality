@@ -1,6 +1,6 @@
 # newreality
 
-comming soon
+<i>comming soon</i>
 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
 <br />
@@ -40,7 +40,6 @@ Raspbery Pi3 - hardware "console" / interface
 <code> </code><br />
 <code>//--------------/network------------------</code><br />
 
-
 <hr/>
 <h2>history</h2>
 (A) version serves as a feasibility study<br />
@@ -51,3 +50,5 @@ A3 - 0.9 - 3D stereography for VR + HW test (Raspberry PI3)<br />
 (B) next step - nework and cooperation<br />
 -> todo 2.0<br /><br />
 (C) final? ;-)<br /><br />
+
+<hr/>
