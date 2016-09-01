@@ -13,7 +13,6 @@ F2 red&blue stereogr.<br/>
 F3 stereographics<br/>
 
 <h2>2D plugins</h2>
-<h2>inputs</h2>
 world map<br/>
 chart / graph<br/>
 matrix / noise / live game<br/>
