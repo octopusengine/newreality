@@ -1,6 +1,6 @@
 # newreality
 
-<a href="http://www.newreality.eu/?page_id=23">www.newreality.eu</a>
+Project web site: <a href="http://www.newreality.eu/?page_id=23">www.newreality.eu</a>
 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
 <br />
