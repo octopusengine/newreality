@@ -4,4 +4,4 @@ setup: config.ini
 -> <b>default</b>)<br/>
 
 and<br/>
-<b>start:<b/> a123.py<br/>
+<b>start:</b> a123.py<br/>
