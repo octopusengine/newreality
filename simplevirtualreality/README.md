@@ -18,7 +18,7 @@ chart / graph<br/>
 matrix / noise / live game<br/>
 
 <h2>3D plugins</h2>
-import cloud points data from 3d scanner
+import cloud points data from <a href=https://github.com/octopusengine/simple3dscanner>github.com/octopusengine/simple3dscanner</a>
 
 <h2>inputs</h2>
 a1 a2 a3 - only standard keyboard and mouse<br/>
