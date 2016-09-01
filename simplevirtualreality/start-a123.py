@@ -318,8 +318,8 @@ def doRotateCube(win):
 i=1
 nasi=5 
 #intro.start
-readFont("pcfont.txt")
-doBmp2Mat("world128x64b.bmp",0,0)
+readFont("oeData/pcfont.txt")
+doBmp2Mat("oeData/world128x64b.bmp",0,0)
 matrixLiveInit()
 doRotateCube(window)
 
