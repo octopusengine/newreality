@@ -1,11 +1,11 @@
 # newreality
 
-Project web site: <a href="http://www.newreality.eu/?page_id=23">www.newreality.eu</a>
-
+Project web site: <a href="http://www.newreality.eu/?page_id=23">www.newreality.eu</a><br/>
+edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, Debian) and Raspberry Pi 3 too!<br/>
++ hw console - for Raspberry Pi3 (Raspbian)
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
 <br />
-lite - running on PC-WIN, MAC, Linux (UBUNTU, MINT, Debian)
-+ hw console - for Raspberry Pi3 (Raspbian)
+
 
 <h2>visualisation</h2>
 perspective - red/blue - streography
