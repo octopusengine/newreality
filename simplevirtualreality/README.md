@@ -13,13 +13,14 @@ F2 red&blue stereogr.<br/>
 F3 stereographics<br/>
 
 <h2>2D plugins</h2>
-world map<br/>
+1.0.0 > world map<br/>
+1.0.0 matrix / noise - next: live game...<br/>
 chart / graph<br/>
-matrix / noise / live game<br/>
+
 
 <h2>3D plugins</h2>
+1.0.1 > import cloud points data from <a href=https://github.com/octopusengine/simple3dscanner>github.com/octopusengine/simple3dscanner</a>
 stars (testing)<br/>
-import cloud points data from <a href=https://github.com/octopusengine/simple3dscanner>github.com/octopusengine/simple3dscanner</a>
 "3D performance"<br/>
 
 <h2>inputs</h2>
