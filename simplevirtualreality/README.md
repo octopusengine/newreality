@@ -1,4 +1,17 @@
-<b>setup:</b> config.ini  
+<b>1. Only start:</b> start-a123.py<br/><br/><br/>
+<br/>
+basic operation: the keyboard<br/> 
+arrows move the first cube<br/>
+u - up<br/>
+d - down<br/>
+
+n - noise<br/>
+b - Bitcoin course - to right list;-)<br/>
+s - change skin<br/>
+...<br/><br/>
+
+<hr>
+<b>2. You can change setup:</b> config.ini  
 <code>net = <b>single</b> / client / server </code><br/> 
 <code>hw = <b>0</b> / 1 </code><br/>
 <code>-> <b>default</b></code><br/>
