@@ -54,6 +54,8 @@ test? https://docs.python.org/3.5/library/socketserver.html<br/>
 <code> </code><br />
 <code>//--------------/network------------------</code><br />
 
+<img src="http://www.newreality.eu/wp-content/uploads/2016/09/netw01-600.jpg">
+
 <hr/>
 <h2>history</h2>
 (A) version serves as a feasibility study<br />
