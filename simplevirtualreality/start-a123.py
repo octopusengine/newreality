@@ -220,15 +220,18 @@ def initCoud3D(scale):
    print("load clout points file: "+scannData)
    with open(scannData) as f:
       for line in f:
-         point = line.split(' ')
-         xp,zp,yp = float(point[0])*scale,(float(point[1])+300)*scale,float(point[2])*scale-500
-         #print xp,yp,zp
-         body = ((xx+xp),(yy+yp),(zz+zp+200))
-         oePoint3D(type3d,(xx+xp),(yy+yp),(zz+zp),col1)
-         cloudPoints.append(body)
-         cnt=cnt+1
-         if (cnt%10000)==0:
-            pygame.display.flip()      
+         try:
+           point = line.split(' ')
+           xp,zp,yp = float(point[0])*scale,(float(point[1])+300)*scale,float(point[2])*scale-500
+           #print xp,yp,zp
+           body = ((xx+xp),(yy+yp),(zz+zp+200))
+           oePoint3D(type3d,(xx+xp),(yy+yp),(zz+zp),col1)
+           cloudPoints.append(body)
+           cnt=cnt+1
+           if (cnt%10000)==0:
+              pygame.display.flip()
+         except:
+            Err=True
    pygame.display.flip()
    print("number of imported xyz points: "+str(cnt))
    time.sleep(5)      
