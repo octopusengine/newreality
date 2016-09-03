@@ -8,9 +8,9 @@ and<br/>
 <hr/>
 <hr/>
 <h2>3D visualisation</h2>
-F1 perspective <br/>
-F2 red&blue stereogr.<br/>
-F3 stereographics<br/>
+F1 perspective (A2)<br/>
+F2 red&blue stereogr. (A3)<br/>
+F3 stereographics (A3)<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/08/visual01-600.jpg">
 
