@@ -14,14 +14,16 @@
 # .07 stereoGraphic testing F1,F2,F3 
 # .08 plugins and info ...F8,F9,F11,F12, wordl map, bitcoin, graph
 # .09 network alfa: single / server / client
-# 1.00 > github/octopusengine
-# 
+# 1.0.0 > 30.08.2016 < github/octopusengine/newreality 
+# 1.0.1 > 03.09.2016 < test import 3d cloud points from simple3Dscanner
 #-----------------------------------------------------------------------
 # TODO:
 # testing on Raspberry Pi 3, simple OPEN-GL
 # new hardware (gyro position), trimers, home sensors (temp..)
 # networking cooperation, local net > internet
 # display search (for virtual reality glasses)
+#-----------------------------------------------------------------------
+ver="1.0.1"
 #-----------------------------------------------------------------------
 
 import os, sys, time
@@ -35,6 +37,9 @@ import oe #MAIN OCTOPUSE ENGINE LIBRARY
 
 nexThread = True #running
 
+scannData="points.xyz" ##xyz cloud points from simple3Dscanner
+configFile="config.ini"
+
 pygame.init()
 window = pygame.display.set_mode([sizeX,sizeY])
 myfont = pygame.font.SysFont("monospace", 15)
@@ -46,23 +51,22 @@ cliSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 #-------------------------------------------------
 xyzList = []
+cloudPoints = []
 xyzList.append((0,0,0))
 
 #--------------------------------------------------------------
 def parseInit():
-   global vars, hwV, verV, hw, ipsV, netV #variables from config
+   global vars, hwV, hw, ipsV, netV #variables from config
    vars = dict() 
    #if os.path.exists("config.ini"):
-   with open("config.ini") as f:
+   with open(configFile) as f:
       for line in f:
         eq_index = line.find('=') 
         if eq_index>0:
           var_name = line[:eq_index].strip()
           value = (line[eq_index + 1:].strip()) 
           vars[var_name] = value
-          
-   try: verV = str(vars["ver"])
-   except: verV="X.X.X"  
+     
           
    try: hwV = int(vars["hw"])
    except: hwV=0
@@ -85,7 +89,7 @@ isServer=False
 if (netV=="server"): isServer=True
 if (netV=="client"): isClient=False
 
-pygame.display.set_caption("octopus engine New reality " + verV)
+pygame.display.set_caption("octopus engine New reality " + ver)
 oeHw=hwV
 
 from oePlugins import BasicSw
@@ -104,6 +108,8 @@ pGraf = Plugin2D(930,350)   # F11
 pRlist = Plugin2D(sizeX-270,110)  # F12
 pSkin0 = Plugin2D(0,0) 
 pNoise = Plugin2D(0,0,False) 
+pScann = Plugin2D(50,50,False) 
+
 
 global rList
 global lList
@@ -127,7 +133,7 @@ lList[20]="TIMER:"
 
 rList = []
 rList.append("System")
-rList.append("ver: "+verV)  
+rList.append("ver: "+ver)  
 rList.append("hw:" + str(hwV))
 rList.append("---") 
 for listApp in range(20):
@@ -204,6 +210,34 @@ def line3dlist(list3d):
         #point2D(lx,ly,lz,cWHI)
         oePoint3D(type3d,lx,ly,lz,col1)
 
+def initCoud3D(scale):
+   global cloudPoints
+   msg="INIT: Loading cloud poinds from 3dscanner (test)"
+   doMsg(msg)
+   print(msg)
+
+   cnt=0
+   print("load clout points file: "+scannData)
+   with open(scannData) as f:
+      for line in f:
+         point = line.split(' ')
+         xp,zp,yp = float(point[0])*scale,(float(point[1])+300)*scale,float(point[2])*scale-500
+         #print xp,yp,zp
+         body = ((xx+xp),(yy+yp),(zz+zp+200))
+         oePoint3D(type3d,(xx+xp),(yy+yp),(zz+zp),col1)
+         cloudPoints.append(body)
+         cnt=cnt+1
+         if (cnt%10000)==0:
+            pygame.display.flip()      
+   pygame.display.flip()
+   print("number of imported xyz points: "+str(cnt))
+   time.sleep(5)      
+         
+def plotCoud3D(xc,yc,zc):
+   if (pScann.enable):
+      for pLine in cloudPoints:     
+         oePoint3D(type3d,pLine[0]+xc,pLine[1]+yc,pLine[2]+zc,col1)      
+         
 
 def plotFGraf(x,y,dataG):
  if (pGraf.enable):
@@ -293,7 +327,7 @@ def doPluginsAfter():
     rListDraw(pRlist.x,pRlist.y)
     lListDraw(pLlist.x,pLlist.y)
 
-    statusMsgDown= "(F1)3D-perspective  (F2)red&blue  (F3)stereographic () |  (F5)Left List  (F6)World map  (F7) (F8)History points  |  (F9)Chess board (F10)Live (F11)Graph  (F12)Right List"
+    statusMsgDown= "(F1)3D-perspective  (F2)red&blue  (F3)stereographic () |  (F5)Left List  (F6)World map  (F7)3Dscann (F8)History points  |  (F9)Chess board (F10)Live (F11)Graph  (F12)Right List"
     label1 = myfont.render(statusMsgDown, 1, col1)    
     window.blit(label1, (lDist*2, sizeY-30))
 
@@ -455,12 +489,17 @@ def nexth(): ##thread timer
 thrTimer1 = Thread(target=nexth)
 thrTimer1.start()
 
+#test
+initCoud3D(15) #scale=10 ok
+
 #============================================================================= 
 #============================================================================= 
 ## main "do while" process:
 while True:
     window.fill(cBLA) 
     doPluginsBefore()
+
+    plotCoud3D(mxc*a*2,myc*a*2,-mzc*a*2)
 
     oePoint3D(type3d,xx+mxc*a+a/4,yy+myc*a+a/4,zz-mzc*a,col1)   
     oeLine3D(type3d,xx,yy,zz,xx+mxc*a+a/4,yy+myc*a+a/4,zz-mzc*a,col1)   
@@ -537,6 +576,8 @@ while True:
 
                 if event.key == pygame.K_F3: #
                    type3d=3
+
+
                                    
                 if event.key == pygame.K_F5: #
                    pLlist.enable =  not pLlist.enable
@@ -544,12 +585,17 @@ while True:
                 if event.key == pygame.K_F6: #
                    pWorld.enable =  not pWorld.enable
 
-                if event.key == pygame.K_F9: #
-                   pChessB.enable = not pChessB.enable
+                if event.key == pygame.K_F7: #
+                   pScann.enable =  not pScann.enable                   
 
                 if event.key == pygame.K_F8: #
                    pHist.enable =  not pHist.enable
 
+
+
+                if event.key == pygame.K_F9: #
+                   pChessB.enable = not pChessB.enable
+        
                 if event.key == pygame.K_F10: #
                    pLive.enable =  not pLive.enable    
 
