@@ -12,7 +12,7 @@ F1 perspective <br/>
 F2 red&blue stereogr.<br/>
 F3 stereographics<br/>
 
-<img src=http://www.newreality.eu/wp-content/uploads/2016/08/visual01-600.jpg>
+<img src="http://www.newreality.eu/wp-content/uploads/2016/08/visual01-600.jpg">
 
 
 <h2>2D plugins</h2>
