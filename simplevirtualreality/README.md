@@ -1,13 +1,12 @@
-<b>1. Only start:</b> start-a123.py<br/><br/><br/>
-<br/>
+<b>1. Only start:</b> start-a123.py<br/>
 basic operation: the keyboard<br/> 
-arrows move the first cube<br/>
+<i>arrows move the first cube<br/>
 u - up<br/>
 d - down<br/>
 
 n - noise<br/>
 b - Bitcoin course - to right list;-)<br/>
-s - change skin<br/>
+s - change skin</i><br/>
 ...<br/><br/>
 
 <hr>
