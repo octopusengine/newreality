@@ -1,4 +1,5 @@
 <b>1. Only start:</b> start-a123.py<br/>
+<b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
 basic operation: the keyboard<br/> 
 <i>arrows move the first cube<br/>
 u - up<br/>
