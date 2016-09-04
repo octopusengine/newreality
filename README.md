@@ -1,6 +1,6 @@
 # newreality
 
-Project web site: <a href="http://www.newreality.eu/?page_id=23">www.newreality.eu</a><br/>
+Project web site: <a href="http://www.newreality.eu/project/">www.newreality.eu</a><br/>
 edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, Debian) and Raspberry Pi 3 too!<br/>
 +it is only Python 2.7 and <a href="http://www.pygame.org/hifi.html">pygame</a> library<br/><br/><br/> 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/newreality09.png" alt="fig5-ball-schematic.png" width="650">
