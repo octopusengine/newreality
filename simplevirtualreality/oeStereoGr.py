@@ -1,4 +1,5 @@
 import pygame, random, sys, time, math
+import pygame.gfxdraw
 
 global type3d
 global sizeX
@@ -113,6 +114,23 @@ def point2D(x0,y0,z0,col):
     colour=col
     pygame.draw.line(window,colour,(x1,y1),(x1+2,y1),2) 
 
+def nAngle2D(n,a0,x0,y0,colAlfa):
+    if(n==3):
+      points2D=((x0,y0-a0),(x0+a0,y0+a0),(x0-a0,y0+a0))
+    if(n==4):
+      points2D=((x0+a0,y0+a0),(x0+a0,y0-a0),(x0-a0,y0-a0),(x0-a0,y0+a0))
+    if(n==6):
+      sin60a=0.866*a0       
+      points2D=((x0,y0+a0),(x0+sin60a,y0+a0/2),(x0+sin60a,y0-a0/2),(x0,y0-a0),(x0-sin60a,y0-a0/2),(x0-sin60a,y0+a0/2))    
+
+    colour= pygame.Color(255, 255, 255, colAlfa)
+    #s.set_alpha(colAlfa)                # alpha level
+    #s.fill((255,255,255))  
+    pygame.gfxdraw.polygon(window, points2D, cSILD)
+    pygame.gfxdraw.filled_polygon(window, points2D, colour)
+    #pygame.draw.line(window,colour,(x1,y1),(x1+2,y1),2)
+    #pygame.gfxdraw.box(window, pygame.Rect(50,50,200,200), (100,0,0,127))
+    #pygame.display.flip()
 
 def oePoint3D(t3d,x0,y0,z0,col):
     if (t3d==1): #simple perspective   

@@ -112,7 +112,7 @@ pRlist = Plugin2D(sizeX-270,110)  # F12
 pSkin0 = Plugin2D(0,0) 
 pNoise = Plugin2D(0,0,False) 
 pScann = Plugin2D(50,50,False) 
-pBeeAlfa = Plugin2D(350,250,False) 
+pBeeAlfa = Plugin2D(230,200,False) 
 
 
 global rList
@@ -246,15 +246,26 @@ def plotCoud3D(xc,yc,zc):
       for pLine in cloudPoints:     
          oePoint3D(type3d,pLine[0]+xc,pLine[1]+yc,pLine[2]+zc,col1)
 
-def plotBeeAlfa():
+def plotBeeAlfa(rand): #alpga silver filter for test red and blue stereo
    if (pBeeAlfa.enable):
-      a6=60
+      d6=3    #distance
+      a6=30   #size ok60
       sin60=0.866
+      sin60a=sin60*a6
       x6=pBeeAlfa.x
       y6=pBeeAlfa.y
-      nAngle2D(6,a6, x6,y6, 32)
-      nAngle2D(6,a6, x6+a6*sin60*2,y6, 39)
-      nAngle2D(6,a6, x6+a6*sin60,y6+a6, 64)
+      for bj in range(0,13):
+         for bi in range(0,20):
+           if (rand): 
+              alfaR=random.randint(10,60)
+           else:
+              alfaR=10+bj*2+bi*3
+           #nAngle2D(6,a6, x6,y6, 32)
+           if (bj%2):
+              nAngle2D(6,a6, x6+(sin60a*2+d6)*bi,y6+(a6*1.5+d6)*bj, alfaR)
+           else:
+              nAngle2D(6,a6, x6+sin60a+(sin60a*2+d6)*bi,y6+(a6*1.5+d6)*bj, alfaR)  
+      #nAngle2D(6,a6, x6+a6*sin60,y6+a6, 64)
          
 
 def plotFGraf(x,y,dataG):
@@ -539,7 +550,7 @@ while True:
       
     doPluginsAfter()
 
-    plotBeeAlfa()
+    plotBeeAlfa(pNoise.enable) #Random = noise
     
        
     pygame.display.flip()
