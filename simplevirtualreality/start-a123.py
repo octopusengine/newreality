@@ -113,7 +113,7 @@ pSkin0 = Plugin2D(0,0)
 pNoise = Plugin2D(0,0,False) 
 pScann = Plugin2D(50,50,False) 
 pBeeAlfa = Plugin2D(230,200,False) 
-
+pMenu = Plugin2D(sizeX/2,sizeY/2,False) 
 
 global rList
 global lList
@@ -245,6 +245,14 @@ def plotCoud3D(xc,yc,zc):
    if (pScann.enable):
       for pLine in cloudPoints:     
          oePoint3D(type3d,pLine[0]+xc,pLine[1]+yc,pLine[2]+zc,col1)
+
+def plotMenu():
+   if (pMenu.enable):
+      menuSize=200
+      nAngle2D(4,menuSize, pMenu.x,pMenu.y, 180)
+      menuTxt = "TEST MENU"
+      label1m = myfont.render(menuTxt, 1, col0)    
+      window.blit(label1m, (pMenu.x-menuSize+30,pMenu.y-menuSize+30))
 
 def plotBeeAlfa(rand): #alpga silver filter for test red and blue stereo
    if (pBeeAlfa.enable):
@@ -551,7 +559,7 @@ while True:
     doPluginsAfter()
 
     plotBeeAlfa(pNoise.enable) #Random = noise
-    
+    plotMenu()
        
     pygame.display.flip()
     frames+=1
@@ -653,6 +661,15 @@ while True:
 
                 if event.key == pygame.K_r:  
                   doRotateCube(window)
+
+                if event.key == pygame.K_0: #numeric keys?
+                   print("test MENU")
+                   pMenu.enable=True
+
+                if event.key == pygame.K_9:
+                   print("exit MENU")
+                   pMenu.enable=False   
+                  
 
                 deltaM()
                 if isClient:
