@@ -31,6 +31,22 @@ def getHostIp():
        host = "socket Err.getHostIp"   
      return host
 
+#====== get procesor temp ============================
+def getProcTemp():  
+   try:
+     pytemp = subprocess.check_output(['vcgencmd', 'measure_temp'], universal_newlines=True)
+     #ipoutput = subprocess.check_output(['vcgencmd measure_temp'], universal_newlines=True, 'w'))
+     #print pytemp 
+     eq_index = pytemp.find('=')+1 
+     #if eq_index>0:
+     var_name = pytemp[:eq_index].strip()
+     value = pytemp[eq_index:eq_index+4]
+     numvalue=float(value)
+   except:
+     numvalue = -1
+   return numvalue 
+
+#====== get Bitcoin course ============================
 def getBTC():
      try: 
        bcfile = urllib2.urlopen("https://www.bitstamp.net/api/ticker/").read()
