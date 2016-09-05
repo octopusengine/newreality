@@ -139,7 +139,8 @@ rList = []
 rList.append("System")
 rList.append("ver: "+ver)  
 rList.append("hw:" + str(hwV))
-rList.append("---") 
+rList.append("procTemp: "+ str(oe.getProcTemp()))
+
 for listApp in range(20):
   rList.append("")
 rList[6]="WORLD POSITION"  
@@ -155,6 +156,10 @@ fGraph.append(300)
 fGraph.append(500)
 fGraph.append(600)
 fGraph.append(700)
+
+fProcTemp = [] #test front graph
+fProcTemp.append(30)
+procTempMax=300
 
 #test class
 #print oeB.hallo()
@@ -290,6 +295,32 @@ def plotFGraf(x,y,dataG):
     pygame.draw.line(window,cSILL,(x+i,y),(x+i,y-num/100*yH),2)
     i=i+iNext
 
+def plotChartPoints(x,y,dataG,dataMax):
+ if (pGraf.enable):
+  i=0
+  gWidth=300
+  iNext = gWidth/150 #a2
+  yH=200/dataMax
+  for num in dataG:
+    yP=y-num*yH 
+    pygame.draw.line(window,cGRE,(x+i,yP),(x+i,yP+2),2)
+    i=i+iNext
+
+def plotChartLines(x,y,dataG):
+ if (pGraf.enable):
+  i=0
+  gWidth=300
+  iNext = gWidth/10 #a2
+  yH=15
+  numPrev=0
+  for num in dataG:
+    yP1=y-numPrev/100*yH
+    yP2=y-num/100*yH 
+    pygame.draw.line(window,cYEL,(x+i,yP1),(x+i+i,yP2),2)
+    numPrev=num
+    i=i+iNext
+
+
 def matrixLiveInit():
   global myMatrixLive 
   n=32
@@ -356,7 +387,9 @@ def doPluginsBefore():
        drawChessboard(cBLA,col2)
 
     plotLive(pLive.x,pLive.y)
-    plotFGraf(930,350,fGraph)
+    plotFGraf(pGraf.x,pGraf.y,fGraph)
+    ##plotChartLines(930,350,fGraph)
+    plotChartPoints(pGraf.x,pGraf.y,fProcTemp,1000) #int procTem*10
     line3dlist(xyzList)
     
 def doPluginsAfter():    
@@ -523,6 +556,14 @@ def nexth(): ##thread timer
    cntx=cntx+1 
    #print cntx
    lList[21]=str(cntx)
+   procTemp=oe.getProcTemp()
+   rList[3]=str(procTemp)
+
+   #fProcTemp.append(random.randint(10,60))
+   fProcTemp.append(procTemp*10)
+   if len(fProcTemp)>procTempMax:
+      fProcTemp.pop(0)
+   
    if isClient:
      sendAuto("t"+str(cntx)+"x"+str(mxc)) #test
      
