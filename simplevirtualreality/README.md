@@ -20,6 +20,7 @@ and<br/>
 <b>start:</b> start-a123.py<br/><br/><br/>
 <hr/>
 <b>points.xyz</b> example cloud points xyz from simple3dscanner<br/><br/>
+procesor Temperature (Linux)<br/>
 
 <hr/>
 <h2>3D visualisation</h2>
