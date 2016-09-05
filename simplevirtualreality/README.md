@@ -1,4 +1,4 @@
-<b>1. Only start:</b> start-a123.py<br/>
+<b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
 basic operation: the keyboard<br/> 
 <i>arrows move the first cube<br/>
@@ -11,7 +11,7 @@ s - change skin</i><br/>
 ...<br/><br/>
 
 <hr>
-<b>2. You can change setup:</b> config.ini  
+<b>You can change setup:</b> config.ini  
 <code>net = <b>single</b> / client / server </code><br/> 
 <code>hw = <b>0</b> / 1 </code><br/>
 <code>-> <b>default</b></code><br/>
@@ -19,6 +19,8 @@ s - change skin</i><br/>
 and<br/>
 <b>start:</b> start-a123.py<br/><br/><br/>
 <hr/>
+<b>points.xyz</b> example cloud points xyz from simple3dscanner<br/><br/>
+
 <hr/>
 <h2>3D visualisation</h2>
 F1 perspective (A2)<br/>
