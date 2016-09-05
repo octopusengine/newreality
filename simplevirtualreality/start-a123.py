@@ -50,9 +50,12 @@ servSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 #-------------------------------------------------
+points2D = []
 xyzList = []
 cloudPoints = []
 xyzList.append((0,0,0))
+
+frames=0
 
 #--------------------------------------------------------------
 def parseInit():
@@ -109,6 +112,7 @@ pRlist = Plugin2D(sizeX-270,110)  # F12
 pSkin0 = Plugin2D(0,0) 
 pNoise = Plugin2D(0,0,False) 
 pScann = Plugin2D(50,50,False) 
+pBeeAlfa = Plugin2D(350,250,False) 
 
 
 global rList
@@ -183,6 +187,7 @@ def deltaM():
   fGraph[3]=mzc*50
   fGraph[4]=myc*50
   xyzList.append((mxc,myc,mzc))
+  lList[22]=str(frames)
   
 def rListDraw(x,y):
   if (pRlist.enable):
@@ -239,7 +244,17 @@ def initCoud3D(scale):
 def plotCoud3D(xc,yc,zc):
    if (pScann.enable):
       for pLine in cloudPoints:     
-         oePoint3D(type3d,pLine[0]+xc,pLine[1]+yc,pLine[2]+zc,col1)      
+         oePoint3D(type3d,pLine[0]+xc,pLine[1]+yc,pLine[2]+zc,col1)
+
+def plotBeeAlfa():
+   if (pBeeAlfa.enable):
+      a6=60
+      sin60=0.866
+      x6=pBeeAlfa.x
+      y6=pBeeAlfa.y
+      nAngle2D(6,a6, x6,y6, 32)
+      nAngle2D(6,a6, x6+a6*sin60*2,y6, 39)
+      nAngle2D(6,a6, x6+a6*sin60,y6+a6, 64)
          
 
 def plotFGraf(x,y,dataG):
@@ -330,7 +345,7 @@ def doPluginsAfter():
     rListDraw(pRlist.x,pRlist.y)
     lListDraw(pLlist.x,pLlist.y)
 
-    statusMsgDown= "(F1)3D-perspective  (F2)red&blue  (F3)stereographic () |  (F5)Left List  (F6)World map  (F7)3Dscann (F8)History points  |  (F9)Chess board (F10)Live (F11)Graph  (F12)Right List"
+    statusMsgDown= "[F1]3D-perspective [F2]red&blue [F3]stereographic [F4]Bee | [F5]Left List [F6]World map [F7]3Dscann [F8]History points | [F9]Chess board [F10]Live [F11]Graph [F12]Right List"
     label1 = myfont.render(statusMsgDown, 1, col1)    
     window.blit(label1, (lDist*2, sizeY-30))
 
@@ -358,6 +373,10 @@ nasi=5
 readFont("oeData/pcfont.txt")
 doBmp2Mat("oeData/world128x64b.bmp",0,0)
 matrixLiveInit()
+
+#nAngle2D(4,30,100,100,cBLU)
+#nAngle2D(3,30,100,100,cYEL)
+
 doRotateCube(window)
 
 #startServer()
@@ -495,6 +514,8 @@ thrTimer1.start()
 #test
 initCoud3D(15) #scale=10 ok
 
+
+
 #============================================================================= 
 #============================================================================= 
 ## main "do while" process:
@@ -517,8 +538,12 @@ while True:
     simpleCharZ(type3d,"C",xx+mxc*a+a*3,yy+myc*a-a*3,zz-mzc*a,15,col6)
       
     doPluginsAfter()
+
+    plotBeeAlfa()
+    
        
     pygame.display.flip()
+    frames+=1
     time.sleep(0.05)
    
 #=============================================================================
@@ -580,6 +605,8 @@ while True:
                 if event.key == pygame.K_F3: #
                    type3d=3
 
+                if event.key == pygame.K_F4: #
+                   pBeeAlfa.enable =  not pBeeAlfa.enable
 
                                    
                 if event.key == pygame.K_F5: #
