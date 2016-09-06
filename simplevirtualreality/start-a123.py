@@ -36,6 +36,7 @@ import oe #MAIN OCTOPUSE ENGINE LIBRARY
 #import oe_incl
 
 nexThread = True #running
+timer1=10        # every timer1 sec...
 
 scannData="points.xyz" ##xyz cloud points from simple3Dscanner
 configFile="config.ini"
@@ -139,7 +140,7 @@ rList = []
 rList.append("System")
 rList.append("ver: "+ver)  
 rList.append("hw:" + str(hwV))
-rList.append("procTemp: "+ str(oe.getProcTemp()))
+##rList.append("procTemp: "+ str(oe.getProcTemp()))
 
 for listApp in range(20):
   rList.append("")
@@ -158,8 +159,10 @@ fGraph.append(600)
 fGraph.append(700)
 
 fProcTemp = [] #test front graph
-fProcTemp.append(30)
-procTempMax=300
+fProcTemp.append(600) #temp*10
+fProcTemp.append(500)
+#fProcTemp.append(350)
+procTempMax=150
 
 #test class
 #print oeB.hallo()
@@ -295,16 +298,18 @@ def plotFGraf(x,y,dataG):
     pygame.draw.line(window,cSILL,(x+i,y),(x+i,y-num/100*yH),2)
     i=i+iNext
 
-def plotChartPoints(x,y,dataG,dataMax):
+def plotChartPoints(x,y,dataG,dataMax): # test for procesor temperature
  if (pGraf.enable):
   i=0
   gWidth=300
   iNext = gWidth/150 #a2
-  yH=200/dataMax
+  #yH=200/dataMax
+  yH=15 
   for num in dataG:
-    yP=y-num*yH 
-    pygame.draw.line(window,cGRE,(x+i,yP),(x+i,yP+2),2)
-    i=i+iNext
+     if num>0:
+       yP=y-float(num/2)+200
+       pygame.draw.line(window,cGRE,(x+i,yP),(x+i,yP+2),2)
+     i=i+iNext
 
 def plotChartLines(x,y,dataG):
  if (pGraf.enable):
@@ -389,7 +394,7 @@ def doPluginsBefore():
     plotLive(pLive.x,pLive.y)
     plotFGraf(pGraf.x,pGraf.y,fGraph)
     ##plotChartLines(930,350,fGraph)
-    plotChartPoints(pGraf.x,pGraf.y,fProcTemp,1000) #int procTem*10
+    plotChartPoints(pGraf.x,pGraf.y,fProcTemp,1000)#int procTem*10
     line3dlist(xyzList)
     
 def doPluginsAfter():    
@@ -552,17 +557,18 @@ def nexth(): ##thread timer
  cntx=0 
  while nexThread:
    
-   time.sleep(5)
+   time.sleep(timer1)
    cntx=cntx+1 
    #print cntx
    lList[21]=str(cntx)
    procTemp=oe.getProcTemp()
-   rList[3]=str(procTemp)
+   rList[4]="Proc.temp: "+str(procTemp)
 
    #fProcTemp.append(random.randint(10,60))
-   fProcTemp.append(procTemp*10)
+   fProcTemp.append(int(procTemp*10))
    if len(fProcTemp)>procTempMax:
-      fProcTemp.pop(0)
+      fProcTemp.pop(0)   
+  
    
    if isClient:
      sendAuto("t"+str(cntx)+"x"+str(mxc)) #test
@@ -697,8 +703,9 @@ while True:
 
                 if event.key == pygame.K_b:
                   rList[2]=str(oe.getServerTime())
-                  rList[3]=(str(oe.getBTC()))
-                  fGraph[0]=int(rList[3])
+                  btcNum=oe.getBTC()
+                  rList[3]="BTC/USD "+(str(btcNum))
+                  fGraph[0]=int(btcNum)
 
                 if event.key == pygame.K_r:  
                   doRotateCube(window)
