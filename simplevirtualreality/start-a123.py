@@ -404,7 +404,7 @@ def doPluginsAfter():
 
     statusMsgDown= "[F1]3D-perspective [F2]red&blue [F3]stereographic [F4]Bee | [F5]Left List [F6]World map [F7]3Dscann [F8]History points | [F9]Chess board [F10]Live [F11]Graph [F12]Right List"
     label1 = myfont.render(statusMsgDown, 1, col1)    
-    window.blit(label1, (lDist*2, sizeY-30))
+    window.blit(label1, (lDist, sizeY-30))
 
 def doRotateCube(win):
   fps=15
