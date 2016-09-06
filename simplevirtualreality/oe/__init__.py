@@ -1,4 +1,4 @@
-import time, socket
+import time, socket, os
 import random, math
 from socket import gethostname, gethostbyname #getIp
 import urllib2, json #getBtc,
@@ -34,7 +34,12 @@ def getHostIp():
 #====== get procesor temp ============================
 def getProcTemp():  
    try:
-     pytemp = subprocess.check_output(['vcgencmd', 'measure_temp'], universal_newlines=True)
+	 # Return CPU temperature as a character string
+     pytemp = os.popen("vcgencmd measure_temp").readline()
+     #value=(res.replace("temp=","").replace("C\n",""))
+     #temp1=int(float(getCPUtemperature()))
+     
+     #pytemp = subprocess.check_output(['vcgencmd', 'measure_temp'], universal_newlines=True)
      #ipoutput = subprocess.check_output(['vcgencmd measure_temp'], universal_newlines=True, 'w'))
      #print pytemp 
      eq_index = pytemp.find('=')+1 
