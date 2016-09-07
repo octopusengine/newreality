@@ -2,7 +2,7 @@
 experimental analog input<br/>
 
 
-
+<hr/>
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
 basic operation: the keyboard<br/> 
@@ -15,17 +15,7 @@ b - Bitcoin course - to right list;-)<br/>
 s - change skin</i><br/>
 ...<br/><br/>
 
-<hr>
-<b>You can change setup:</b> config.ini  
-<code>net = <b>single</b> / client / server </code><br/> 
-<code>hw = <b>0</b> / 1 </code><br/>
-<code>-> <b>default</b></code><br/>
 
-and<br/>
-<b>start:</b> start-a123.py<br/><br/><br/>
-<hr/>
-<b>points.xyz</b> example cloud points xyz from simple3dscanner<br/><br/>
-procesor Temperature (Linux)<br/>
 
 <hr/>
 <h2>3D visualisation</h2>
