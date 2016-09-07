@@ -9,6 +9,13 @@ blue - analog1 value <br />
 white - analog2 value<br />
 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/octopusengineLab/images/lab-chart3.png">
+<br/ >
+<br/ >
+
+<img src="https://raw.githubusercontent.com/octopusengine/newreality/master/octopusengineLab/images/oelab01-600.jpg">
+<br/ >
+<br/ >
+
 
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
