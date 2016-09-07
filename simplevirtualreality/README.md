@@ -24,6 +24,8 @@ procesor Temperature (Linux)<br/>
 
 <hr/>
 <h2>3D visualisation</h2>
+<img src="http://www.newreality.eu/wp-content/uploads/2016/08/visual01-600.jpg"><br/><br/>
+
 F1 perspective (A2)<br/>
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/f1.png"><br/>
 F2 red&blue stereogr. (A3)<br/>
@@ -31,7 +33,6 @@ F2 red&blue stereogr. (A3)<br/>
 F3 stereographics (A3)<br/>
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/F3.png"><br/>
 
-<img src="http://www.newreality.eu/wp-content/uploads/2016/08/visual01-600.jpg">
 
 
 <h2>2D plugins</h2>
