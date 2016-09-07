@@ -3,6 +3,10 @@ experimental analog input<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
 <hr/>
+green - procesor temperature<br />
+red - analog0 value<br />
+blue - analog1 value <br />
+white - analog2 value<br />
 
 <img src="https://raw.githubusercontent.com/octopusengine/newreality/master/octopusengineLab/images/lab-chart3.png">
 
