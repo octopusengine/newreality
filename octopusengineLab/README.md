@@ -3,6 +3,11 @@ experimental analog input<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
 <hr/>
+
+<div class="image">
+<span class="border-wrap"><img src="/octopusengine/newreality/blob/master/octopusengineLab/images/lab-chart3.png?raw=true" alt="lab-chart3.png"></span>
+</div>
+
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
 basic operation: the keyboard<br/> 
