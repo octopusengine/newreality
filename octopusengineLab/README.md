@@ -4,7 +4,7 @@ experimental analog input<br/>
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
 <hr/>
 
-<img src="/octopusengine/newreality/blob/master/octopusengineLab/images/lab-chart3.png" alt="lab-chart3.png">
+<img src="https://raw.githubusercontent.com/octopusengine/newreality/master/octopusengineLab/images/lab-chart3.png">
 
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
