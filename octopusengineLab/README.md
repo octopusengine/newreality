@@ -1,3 +1,8 @@
+<b>Raspberry Pi 3 + Arduino Nano</b><br/>
+experimental analog input<br/>
+
+
+
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
 basic operation: the keyboard<br/> 
