@@ -1,7 +1,7 @@
 <b>Raspberry Pi 3 + Arduino Nano</b><br/>
 experimental analog input<br/>
 
-<img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png">
+<img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
 <hr/>
 <b>Only start:</b> start-a123.py<br/>
 <b>Yes. It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)</b> <br/> 
