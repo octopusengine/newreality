@@ -3,7 +3,59 @@ experimental analog input<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
 <hr />
-<b>oeLab / RaspberryPi - Python</b>
+<b>oeLab / Arduino nano (I2C slave) - C</b>
+<pre>
+void setup(){ 
+   Wire.begin(0x33);
+   ...
+   Wire.onReceive(onRec); 
+   Wire.onRequest(sendData); 
+   } 
+ 
+void loop()
+{ 
+   delay(10);
+   readDigi();
+   analog0 = analogRead(A0);
+   analog1 = analogRead(A1);
+   if(a == 'H'){digitalWrite(LED13, HIGH); cnt++;} 
+   else if(a == 'L'){digitalWrite(LED13, LOW);}
+   ...
+} 
+
+void readDigi(){
+  int reading2 = digitalRead(D2);
+  delay(1);
+  int reading2b = digitalRead(D2);
+  if (reading2==reading2b) {  lastButtonState2 = reading2;}
+  else lastButtonState2=digitalRead(D2);
+...
+}
+
+ void onRec(int b){ 
+   while(Wire.available() > 0){ 
+   a = Wire.read(); 
+   }
+}
+
+void sendData(){
+  mb[0] = analog0%256; //byte low  
+  mb[1] = (analog0-(analog0%256))/256; //byte high
+  mb[2] = analog1%256; //byte low  
+  mb[3] = (analog1-(analog1%256))/256; //byte high
+ ...
+  mb[14] = 123;
+  mb[15] = cnt;
+  Wire.write(mb, 16);
+}
+</pre>
+in loop prepare data (analog A0,A1,A2.. and digital D2,D3) <br/>
+on request - send it to I2C master<br />
+</hr>
+
+
+
+<b>oeLab / RaspberryPi (I2C master) - Python</b>
 <pre>
 import smbus, time
 bus = smbus.SMBus(1)       # 0 = /dev/i2c-0 (port I2C0), 1 = /dev/i2c-1 (port I2C1)
