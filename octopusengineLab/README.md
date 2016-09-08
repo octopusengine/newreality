@@ -1,4 +1,4 @@
-<b>Raspberry Pi 3 + Arduino Nano</b> (as a i2c slave)<br/>
+<b>Raspberry Pi 3 + Arduino Nano</b> (as i2c slave)<br/>
 experimental analog input<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
