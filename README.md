@@ -6,7 +6,8 @@ only Python 2.7 and Pygame library<br/>
 <br/><br/>
 STEP 2<br/>
 <b>newreality/octopusengineLab</b><br/>
-Testing with Raspberry Pi and Arduino Nano (as I2C slave)<br/>
+First "hardware" with Raspberry Pi and Arduino Nano (as I2C slave)<br/>
+<i>testing reading analog values, data transfer, next: "gyro" xyz sensor</i>
 <br/><hr/>
  
 
