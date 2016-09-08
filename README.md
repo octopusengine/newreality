@@ -1,5 +1,10 @@
 # newreality
 
+Testing with Raspberry Pi and Arduino Nano (as I2C slave)
+
+It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian) 
+
+
 Project web site: <a href="http://www.newreality.eu/project/">www.newreality.eu</a><br/>
 edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, Debian) and Raspberry Pi 3 too!<br/>
 +it is only Python 2.7 and <a href="http://www.pygame.org/hifi.html">pygame</a> library<br/><br/><br/> 
