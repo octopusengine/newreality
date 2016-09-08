@@ -2,6 +2,26 @@
 experimental analog input<br/>
 
 <img src="http://www.newreality.eu/wp-content/uploads/2016/09/oe-lab01_bb.png" width="500">
+<hr />
+<b>oeLab / RaspberryPi - Python</b>
+<pre>
+import smbus, time
+bus = smbus.SMBus(1)       # 0 = /dev/i2c-0 (port I2C0), 1 = /dev/i2c-1 (port I2C1)
+
+DEVICE_ADDRESS = 0x33      #7 bit address (will be left shifted to add the read write bit)
+DEVICE_REG_MODE1 = 0x00
+
+def getLabData(): 
+   bus.write_byte_data(DEVICE_ADDRESS, DEVICE_REG_MODE1, ord("H"))
+   time.sleep(0.05)		
+   data=bus.read_i2c_block_data(DEVICE_ADDRESS, DEVICE_REG_LEDOUT0)
+   bus.write_byte_data(DEVICE_ADDRESS, DEVICE_REG_MODE1, ord("L"))
+   time.sleep(0.01)
+   return data
+</pre>
+return 32Byte vector of values<br/>
+
+
 <hr/>
 green - procesor temperature<br />
 red - analog0 value<br />
