@@ -3,14 +3,13 @@ STEP 1<br/>
 <b>newreality/simplevirtualreality</b><br/>
 It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)<br/>
 only Python 2.7 and Pygame library<br/>
+<i>testing visualisation (perspective, stereographics) an simple 2D/3D plugins</i><br/>
 <br/><br/>
 STEP 2<br/>
 <b>newreality/octopusengineLab</b><br/>
 First "hardware" with Raspberry Pi and Arduino Nano (as I2C slave)<br/>
-<i>testing reading analog values, data transfer, next: "gyro" xyz sensor</i>
+<i>testing reading analog values, data transfer, next: "gyro" xyz sensor</i><br/>
 <br/><hr/>
- 
-
 
 Project web site: <a href="http://www.newreality.eu/project/">www.newreality.eu</a><br/>
 edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, Debian) and Raspberry Pi 3 too!<br/>
