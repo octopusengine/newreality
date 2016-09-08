@@ -1,8 +1,14 @@
 # newreality
-
-Testing with Raspberry Pi and Arduino Nano (as I2C slave)
-
-It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian) 
+STEP 1<br/>
+<b>newreality/simplevirtualreality</b><br/>
+It works on PC - Win / iOS / Linux (UBUNTU,MINT,Raspbian)<br/>
+only Python 2.7 and Pygame library<br/>
+<br/><br/>
+STEP 2<br/>
+<b>newreality/octopusengineLab</b><br/>
+Testing with Raspberry Pi and Arduino Nano (as I2C slave)<br/>
+<br/><hr/>
+ 
 
 
 Project web site: <a href="http://www.newreality.eu/project/">www.newreality.eu</a><br/>
