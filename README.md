@@ -19,7 +19,7 @@ edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, De
 
 
 <h2>visualisation</h2>
-perspective - red/blue - streography
+perspective - red/blue | streography
 
 <h2>network testing</h2>
 localhost... > (IP)
@@ -28,6 +28,8 @@ localhost... > (IP)
 local network runnig
 
 <h2>next step (HW)</h2>
-Raspbery Pi3 - hardware "console" / interface
+Raspbery Pi3 - hardware "console" | interface
+
+<hr />
 
 
