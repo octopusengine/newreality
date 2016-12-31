@@ -11,6 +11,12 @@ First "hardware" with Raspberry Pi and Arduino Nano (as I2C slave)<br/>
 <i>testing reading analog values, data transfer, next: "gyro" xyz sensor</i><br/>
 <br/><hr/>
 
+STEP 2<br/>
+<b>newreality/unity3d</b><br/>
+<i>3d models + software & C-sharp scripts </i><br/>
+<br/><hr/>
+
+
 Project web site: <a href="http://www.newreality.eu/project/">www.newreality.eu</a><br/>
 edition <b>start-a123</b> is running on PC-WIN, MAC-iOS, Linux (UBUNTU, MINT, Debian) and Raspberry Pi 3 too!<br/>
 +it is only Python 2.7 and <a href="http://www.pygame.org/hifi.html">pygame</a> library<br/><br/><br/> 
