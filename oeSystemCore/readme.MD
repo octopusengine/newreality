@@ -1,6 +1,6 @@
 
 22.3.2017<br />
-hraju si s myšlenkou universálního systémového rozhraní (+ programy Csharp ale i python) který buď přes soubor na disku (ideálně jenom v RAM) nebo na vzdáleném serveru (HTTP request) bude komunikovat s IoT - a octopusengineVR by k těm datům pouze přestupoval a vizualizoval by je 
+hraju si s myšlenkou universálního systémového rozhraní (+ programy Csharp ale i python) který buď přes soubor na disku (ideálně jenom v RAM) nebo na vzdáleném serveru (HTTP request) bude komunikovat s IoT - a octopusengineVR by k těm datům pouze přistupoval a vizualizoval by je 
 <br /><hr />
 23.3.2017<br />
 octopusengineVR + neos budou mít společné rozhraní:<br />
