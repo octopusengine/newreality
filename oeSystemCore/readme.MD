@@ -1,0 +1,2 @@
+
+hraju si s myšlenkou universálního systémového rozhraní (+ programy Csharp ale i python) který buï pøed soubor na disku nebo na vzdáleném serveru bude komunikovat s IoT - a octopusengineVR by k tìm datùm pouze pøestupoval a vizualizoval by je - co ty na to?
