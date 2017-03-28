@@ -6,6 +6,7 @@ hraju si s myšlenkou universálního systémového rozhraní (+ programy Csharp
 octopusengineVR + neos budou mít společné rozhraní:<br />
 stavový vektor/ datová struktura / zatím string / časem JSON pole čísel, až pole objektů<br />
 <i>PETR > obzvlast v IoT mas ted messaging brokery ala MQTT a mozna by se nato dala vyuzit</i><br />
+> "uložiště a API kde se propojí IOT a VR"<br />
 data se můžou získávat:<br />
 ze senzorů IoT<br />
 od uživatelů z mobilních aplikací<br />
